@@ -1,0 +1,292 @@
+.s-hero {
+  width: 100%;
+  height: 78.6rem;
+  padding-top: 17.6rem;
+  background: linear-gradient(99.31deg, #00a5f0 7.94%, #00d7d7 95.32%);
+  .container {
+    @include flex(row, flex-start, space-between);
+  }
+  .text {
+    width: 100%;
+    max-width: 68.3rem;
+    h3 {
+      opacity: 0.8;
+      font-weight: 600;
+      color: white;
+      margin-bottom: 3.2rem;
+    }
+    h1 {
+      color: white;
+      margin-bottom: 3.9rem;
+    }
+    ul {
+      width: 100%;
+      max-width: 62.1rem;
+      margin-top: 6.4rem;
+      @include flex(row, center, space-between);
+      li {
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+        .icon {
+          width: 48px;
+          height: 48px;
+          border-radius: 50%;
+          background: linear-gradient(
+            180deg,
+            rgba(53, 203, 226, 0.8) 0%,
+            rgba(53, 202, 226, 0) 100%
+          );
+          @include flex(row, center, center);
+        }
+        span {
+          font-family: "inter", sans-serif;
+          font-size: 1.8rem;
+          font-weight: 400;
+          line-height: 21.92px;
+          color: white;
+        }
+      }
+    }
+  }
+  .area-image {
+    width: 100%;
+    max-width: 70.6rem;
+    margin-right: -17.3rem;
+    h2 {
+      margin-bottom: 6.7rem;
+      text-align: center;
+      color: #ffffff;
+      opacity: 0.4;
+      font-size: 56px;
+      line-height: 84px;
+      letter-spacing: -2px;
+    }
+    .image {
+      position: relative;
+      width: 100%;
+      height: 54.1rem;
+      img {
+        position: absolute;
+      }
+      .circle {
+        right: 4.3rem;
+        top: 2.8rem;
+        z-index: 1;
+      }
+      .card-front {
+        z-index: 3;
+        top: 4.1rem;
+      }
+      .card-back {
+        z-index: 2;
+        top: 17.3rem;
+        right: 8.6rem;
+      }
+    }
+  }
+}
+.s-card-neon {
+  padding-top: 12.9rem;
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .left-area {
+      width: 100%;
+      max-width: 27.7rem;
+      .app-img {
+        position: relative;
+        width: 100%;
+        max-width: 27.7rem;
+        margin-bottom: 13rem;
+        .circle {
+          position: absolute;
+          top: 8.7rem;
+          max-width: 37.7rem;
+          left: -21.4rem;
+          z-index: -1;
+        }
+      }
+      .text {
+        width: 100%;
+        max-width: 27.7rem;
+        @include flex(column, center, center);
+        .icon {
+          position: relative;
+          &:before {
+            content: "";
+            width: 5px;
+            height: 83px;
+            background: url(../img/points.svg) no-repeat center center;
+            display: block;
+            position: absolute;
+            top: -104px;
+            left: 50%;
+            margin-left: -2.5px;
+          }
+        }
+        .info-app {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          h3 {
+            text-align: center;
+            margin-top: 3.2rem;
+          }
+          p {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            text-align: center;
+            margin-bottom: 2.6rem;
+          }
+          ul {
+            li {
+              &:not(:last-child) {
+                margin-bottom: 1.6rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .right-area {
+    width: 100%;
+    max-width: 80rem;
+    .main-text {
+      margin-bottom: 14.4rem;
+      h2 {
+        font-weight: 700;
+        max-width: 48.8rem;
+        margin-bottom: 1.6rem;
+      }
+      ul {
+        li {
+          border-bottom: 1px solid rgba(225, 224, 231, 0.9);
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 3.3rem 0rem;
+          .info {
+            display: flex;
+            align-items: center;
+            img {
+              margin-right: 4.3rem;
+            }
+            .text {
+              h3 {
+                color: $gray-400;
+              }
+              p {
+                color: $gray-300;
+              }
+            }
+          }
+        }
+        margin-bottom: 3.2rem;
+      }
+      a {
+        position: relative;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 17.92px;
+        letter-spacing: -0.5px;
+        color: $blue;
+        &::after {
+          content: "";
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          width: 10px;
+          height: 3px;
+          background-color: $yellow;
+          right: -18px;
+        }
+      }
+    }
+    .box-card {
+      width: 100%;
+      height: 41rem;
+      background: url(../img/BG-box-PJ.svg) no-repeat center center;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-left: 5.9rem;
+      .text {
+        width: 100%;
+        max-width: 38rem;
+        h2 {
+          line-height: 60px;
+          letter-spacing: -2px;
+          color: white;
+          margin-bottom: 7px;
+        }
+        h3 {
+          font-size: 28px;
+          font-weight: 600;
+          line-height: 33.6px;
+          letter-spacing: -1px;
+          color: white;
+          margin-bottom: 1.1rem;
+        }
+        p {
+          font-size: 17px;
+          line-height: 23.8px;
+          color: white;
+          font-weight: 300;
+          margin-bottom: 3.3rem;
+        }
+      }
+      img {
+        margin-right: -31px;
+        box-shadow: -7px 14px 17px 2px rgba(2, 131, 171, 0.3);
+      }
+      .btn {
+        display: flex;
+        gap: 16px;
+        button {
+          width: 100%;
+          max-width: 13.2rem;
+        }
+      }
+    }
+  }
+}
+
+.s-depoimentos {
+  padding-top: 13.4rem;
+  .top {
+    margin-bottom: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    h2 {
+      span {
+        display: block;
+        color: $gray-200;
+        margin-bottom: 1.4rem;
+      }
+    }
+    .paginador {
+      width: 7.7rem;
+      align-items: end;
+      .swiper-pagination-bullet {
+        width: 8.62px;
+        height: 7px;
+        border-radius: 12px;
+        opacity: 0.3px;
+        background: $yellow;
+        transition: all 0.3s;
+      }
+      .swiper-pagination-bullet-active {
+        width: 17.23px;
+      }
+    }
+  }
+  .slide-depoimentos {
+    overflow: hidden;
+  }
+}
