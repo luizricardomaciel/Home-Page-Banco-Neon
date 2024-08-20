@@ -30,4 +30,46 @@ header {
       }
     }
   }
+  .btn-mobile {
+    display: none;
+  }
+  @include responsive(1100px) {
+    .container {
+      nav {
+        ul {
+          margin-right: 1.9rem;
+          gap: 1.9rem;
+        }
+      }
+    }
+  }
+  @include responsive(950px) {
+    .container {
+      .logo {
+        max-width: 10.8rem;
+      }
+      nav {
+        ul {
+          display: none;
+        }
+      }
+      .btn-mobile {
+        margin-left: 4rem;
+        display: block;
+      }
+      .btn-secondary {
+        line-height: 4.1rem;
+      }
+    }
+  }
+  @include responsive(500px) {
+    height: 7.3rem;
+    .container {
+      nav {
+        .btn-secondary {
+          display: none;
+        }
+      }
+    }
+  }
 }

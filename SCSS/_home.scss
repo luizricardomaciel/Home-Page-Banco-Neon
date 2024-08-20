@@ -58,8 +58,8 @@
       text-align: center;
       color: #ffffff;
       opacity: 0.4;
-      font-size: 56px;
-      line-height: 84px;
+      font-size: 5.6rem;
+      line-height: 8.4rem;
       letter-spacing: -2px;
     }
     .image {
@@ -73,21 +73,175 @@
         right: 4.3rem;
         top: 2.8rem;
         z-index: 1;
+        max-width: 55.3rem;
       }
       .card-front {
         z-index: 3;
         top: 4.1rem;
+        max-width: 43.5rem;
       }
       .card-back {
         z-index: 2;
         top: 17.3rem;
         right: 8.6rem;
+        max-width: 35.2rem;
+      }
+    }
+  }
+  @include responsive(1440px) {
+    .area-image {
+      margin-right: -13.4rem;
+    }
+  }
+  @include responsive(1366px) {
+    .area-image {
+      margin-right: -8rem;
+    }
+  }
+  @include responsive(1050px) {
+    padding-top: 14.5rem;
+    height: 69.6rem;
+    .text {
+      ul {
+        margin-top: 3.4rem;
+      }
+    }
+    .area-image {
+      margin-right: -8rem;
+      h2 {
+        font-size: 4rem;
+      }
+      .image {
+        .card-front {
+          max-width: 34rem;
+        }
+        .card-back {
+          max-width: 27.4rem;
+        }
+        .circle {
+          max-width: 43rem;
+        }
+      }
+    }
+  }
+  @include responsive(991px) {
+    height: 89.1rem;
+    .container {
+      flex-direction: column;
+      align-items: center;
+      .text {
+        margin-bottom: 5rem;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h1 {
+          text-align: center;
+          margin-bottom: 2.6rem;
+        }
+        h3 {
+          text-align: center;
+          margin-bottom: 2.4rem;
+        }
+        ul {
+          margin-top: 3.9rem;
+        }
+      }
+      .area-image {
+        margin-right: 0;
+        h2 {
+          margin-bottom: 1.9rem;
+          line-height: 1;
+        }
+        .image {
+          max-width: 51.1rem;
+          margin: 0 auto;
+          height: 42.4rem;
+        }
+        .circle {
+          top: 0;
+          right: 13.7px;
+        }
+        .card-front {
+          top: 3.58rem;
+          left: 0;
+        }
+        .card-back {
+          top: 13.75rem;
+          right: 29.8px;
+        }
+      }
+    }
+  }
+  @include responsive(550px) {
+    padding-top: 12.4rem;
+    height: 73.9rem;
+    .container {
+      .text {
+        margin-bottom: 5.1rem;
+        h3 {
+          font-size: 1.6rem;
+          line-height: 120%;
+          margin-bottom: 1.5rem;
+        }
+        h1 {
+          font-size: 3.2rem;
+          line-height: 112%;
+          margin-bottom: 3.7rem;
+        }
+        ul {
+          flex-direction: column;
+          align-items: flex-start;
+          margin-top: 3.7rem;
+          max-width: 27rem;
+          li {
+            &:not(:last-child) {
+              margin-bottom: 1.7rem;
+            }
+            .icon {
+              width: 20px;
+              height: auto;
+              background: linear-gradient(transparent);
+            }
+            span {
+              br {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+      .area-image {
+        max-width: 31.8rem;
+        height: 27.1rem;
+        h2 {
+          display: none;
+        }
+        .image {
+          height: 27.1rem;
+          .circle {
+            right: 12px;
+            top: 0;
+            width: 26.7rem;
+          }
+          .card-front {
+            width: 21.2rem;
+            top: 29px;
+            left: 0;
+          }
+          .card-back {
+            width: 17rem;
+            right: 18.5px;
+            top: 92px;
+          }
+        }
       }
     }
   }
 }
 .s-card-neon {
   padding-top: 12.9rem;
+  position: relative;
   .container {
     display: flex;
     flex-direction: row;
@@ -135,11 +289,12 @@
             margin-top: 3.2rem;
           }
           p {
-            font-size: 16px;
             font-weight: 400;
-            line-height: 24px;
             text-align: center;
             margin-bottom: 2.6rem;
+            line-height: 21.92px;
+            font-size: 18px;
+            opacity: 80%;
           }
           ul {
             li {
@@ -254,6 +409,220 @@
       }
     }
   }
+  @include responsive(1200px) {
+    .left-area {
+      .app-img {
+        .circle {
+          display: none;
+        }
+      }
+    }
+    .right-area {
+      margin-left: 3rem;
+      max-width: 73rem;
+      .box-card {
+        padding-left: 2rem;
+        img {
+          margin-right: -5px;
+        }
+      }
+      .main-text {
+        ul {
+          li {
+            .info {
+              img {
+                margin-right: 3rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @include responsive(991px) {
+    .container {
+      flex-direction: column-reverse;
+      .left-area {
+        display: flex;
+        align-items: center;
+        max-width: 61rem;
+        margin: 0 auto;
+        gap: 8.5rem;
+        margin-top: 9.3rem;
+        .text {
+          .icon {
+            &::before {
+              display: none;
+            }
+          }
+        }
+        .app-img {
+          margin-bottom: 0;
+        }
+      }
+    }
+    .right-area {
+      max-width: 68.8rem;
+      margin: 0 auto;
+      .main-text {
+        margin-bottom: 5.7rem;
+        h2 {
+          text-align: center;
+          margin: 0 auto;
+          margin-bottom: 5.3rem;
+          font-size: 3.6rem;
+        }
+        a {
+          display: block;
+          text-align: center;
+          &::after {
+            display: none;
+          }
+        }
+      }
+      .box-card {
+        max-width: 94%;
+        background: url(none);
+        background: linear-gradient(99.31deg, #00a5f0 7.94%, #00d7d7 95.32%);
+        img {
+          margin-right: -25px;
+        }
+      }
+    }
+  }
+  @include responsive(630px) {
+    .right-area {
+      .box-card {
+        max-width: 100%;
+        height: 47rem;
+        background-size: cover;
+        flex-direction: column;
+        padding-top: 4.3rem;
+        padding-left: 0;
+        margin-bottom: 4rem;
+        .image {
+          margin-right: 0;
+        }
+        .text {
+          max-width: 90%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-bottom: 3rem;
+          text-align: center;
+          .btn {
+            button {
+              width: auto;
+            }
+          }
+        }
+        img {
+          box-shadow: 10px -14px 16px 0px #00a5f059;
+        }
+      }
+    }
+  }
+  @include responsive(480px) {
+    padding-top: 8.6rem;
+    &::after {
+      content: "";
+      width: 100%;
+      height: 214px;
+      background: linear-gradient(
+        180deg,
+        #f7f7fa 0%,
+        rgba(247, 247, 250, 0) 100%
+      );
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transform: matrix(1, 0, 0, -1, 0, 0);
+      z-index: -1;
+    }
+    .container {
+      .left-area {
+        flex-direction: column-reverse;
+        margin-top: 6.7rem;
+        gap: 4rem;
+        .app-img {
+          height: 50rem;
+          overflow: hidden;
+        }
+        .text {
+          .info-app {
+            h3 {
+              margin-top: 1.4rem;
+            }
+            p {
+            }
+          }
+        }
+      }
+    }
+    .right-area {
+      .main-text {
+        margin-bottom: 3.4rem;
+        h2 {
+          font-size: 2.8rem;
+          margin-bottom: 3.7rem;
+          max-width: 31.6rem;
+        }
+        ul {
+          li {
+            padding: 0;
+            padding-top: 2.8rem;
+            padding-bottom: 2.8rem;
+            .info {
+              align-items: flex-start;
+              img {
+                margin-right: 2.3rem;
+              }
+              .text {
+                max-width: 71%;
+                h3 {
+                  font-size: 20px;
+                  line-height: 22.4px;
+                }
+                p {
+                  font-size: 14px;
+                  line-height: 21px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .box-card {
+        padding: 4.3rem 2.8rem 0 2.8rem;
+        .text {
+          h2 {
+            font-size: 28px;
+            line-height: 42px;
+            letter-spacing: -1.72px;
+            margin-bottom: 14px;
+          }
+          h3 {
+            line-height: 24px;
+            font-size: 20px;
+          }
+          p {
+            font-size: 16px;
+            line-height: 24px;
+          }
+          .btn {
+            .btn-primary {
+              width: 12.1rem;
+              padding: 0;
+            }
+          }
+        }
+        img {
+          max-width: 277px;
+          margin-right: 0;
+        }
+      }
+    }
+  }
 }
 
 .s-depoimentos {
@@ -288,5 +657,74 @@
   }
   .slide-depoimentos {
     overflow: hidden;
+  }
+}
+
+.s-digital {
+  padding-top: 12.7rem;
+  padding-bottom: 8.5rem;
+  .container {
+    display: flex;
+    .text {
+      width: 100%;
+      max-width: 54.2rem;
+      margin-right: 11.8rem;
+      h2 {
+        font-weight: 700;
+        margin-bottom: 4.5rem;
+        span {
+          font-weight: 600;
+          display: block;
+          color: $gray-200;
+          opacity: 0.8;
+          margin-bottom: 9px;
+        }
+      }
+      ul {
+        margin-bottom: 6.1rem;
+        li {
+          display: flex;
+          gap: 2.6rem;
+          &:not(:last-child) {
+            margin-bottom: 4.5rem;
+          }
+          .icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 8px;
+            background-color: $green-light;
+            @include flex(row, center, center);
+          }
+          .info {
+            h4 {
+              color: $gray-400;
+            }
+            p {
+              color: $gray-300;
+            }
+          }
+        }
+      }
+    }
+    .image {
+      position: relative;
+      width: 100%;
+      max-width: 71.2rem;
+      height: 59.8rem;
+      img {
+        position: absolute;
+        margin-right: -156px;
+        &.circle {
+          right: 0;
+          bottom: 0;
+        }
+        &.cell02 {
+          left: 258.5px;
+        }
+        &.cell01 {
+          top: 8.55rem;
+        }
+      }
+    }
   }
 }
