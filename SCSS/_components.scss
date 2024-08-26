@@ -16,4 +16,7 @@
       color: $gray-500;
     }
   }
+  @include responsive(991px) {
+    height: 25.3rem;
+  }
 }
