@@ -79,12 +79,14 @@
         z-index: 3;
         top: 4.1rem;
         max-width: 43.5rem;
+        animation: floating 4s infinite;
       }
       .card-back {
         z-index: 2;
         top: 17.3rem;
         right: 8.6rem;
         max-width: 35.2rem;
+        animation: floating 5s infinite;
       }
     }
   }
@@ -894,5 +896,17 @@
         }
       }
     }
+  }
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0);
+  }
+  66% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
