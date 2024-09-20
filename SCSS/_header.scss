@@ -9,8 +9,63 @@ header {
   .container {
     @include flex(row, center, space-between);
     nav {
+      position: relative;
       display: flex;
       align-items: center;
+      .dropdown {
+        position: absolute;
+        top: 49px;
+        left: -126px;
+        width: 100%;
+        max-width: 37.3rem;
+        background-color: white;
+        border-radius: 6px;
+        padding: 4rem;
+        z-index: 6;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.3s;
+        transform: translateY(20px);
+        &.active {
+          opacity: 1;
+          pointer-events: all;
+          transform: translateY(0px);
+        }
+        &::after {
+          content: "";
+          width: 29.3rem;
+          height: 5px;
+          background-color: $yellow;
+          border-radius: 12px 12px 0px 0px;
+          position: absolute;
+          bottom: 0;
+        }
+        .item {
+          cursor: pointer;
+          &:not(:last-child) {
+            margin-bottom: 2.8rem;
+          }
+          &:hover {
+            strong {
+              color: $blue;
+            }
+          }
+          strong {
+            font-weight: 600;
+            font-size: 1.6rem;
+            line-height: 1.9rem;
+            color: $gray-400;
+            display: block;
+            margin-bottom: 4px;
+            transition: color 0.3s;
+          }
+          p {
+            font-size: 1.4rem;
+            line-height: 150%;
+            color: #8c8a97;
+          }
+        }
+      }
       ul {
         display: flex;
         margin-right: 5.9rem;
